@@ -16,11 +16,11 @@ jobs:
         run: |
           
           git config --global credential.helper store
-          echo "https://github.com/ripan01/AutoAnimeBot" > ~/.git-credentials
+          echo "https://github.com/ripan04/AutoAnimeBot" > ~/.git-credentials
 
       - name: Clone Mirror Repo
         run: |
-          git clone https://github.com/ripan01/AutoAnimeBot source
+          git clone https://github.com/ripan04/AutoAnimeBot source
 
       - name: Compile Docker
         run: |
@@ -37,7 +37,7 @@ jobs:
       - name: Loop Workflow
         continue-on-error: true
         run: |
-          git clone https://github.com/ripan01/AutoAnimeBot loop
+          git clone https://github.com/ripan04/AutoAnimeBot loop
           cd loop || exit 1
           git commit --allow-empty -m "Workflow: Loop"
           git push -f
